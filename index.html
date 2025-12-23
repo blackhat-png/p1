@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MedCare Hospital Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+        header {
+            background: #0a3d62;
+            padding: 15px 50px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(10,61,98,0.7), rgba(10,61,98,0.7)),
+                        url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+        }
+
+        section {
+            padding: 60px 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #0a3d62;
+        }
+
+        .about p {
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .services, .doctors, .departments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #0a3d62;
+        }
+
+        .appointment {
+            background: #eaf4fb;
+        }
+
+        form {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            background: #0a3d62;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #075078;
+        }
+
+        footer {
+            background: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MedCare Hospital</h1>
+    <nav>
+       <a href="login.html">Admin</a>
+       <a href="doctor1.html">Doctor</a>
+       <a href="plogin.html">Patient</a>
+        
+    </nav>
+</header>
+
+<div class="hero">
+    <div>
+        <h2>Your Health, Our Priority</h2>
+        <p>Providing world-class healthcare services with experienced doctors and modern facilities.</p>
+    </div>
+</div>
+
+<section class="about">
+    <div class="section-title">
+        <h2>About Us</h2>
+    </div>
+    <p>
+        MedCare Hospital is a multi-specialty healthcare institution dedicated to providing high-quality medical
+        services. We combine advanced technology, expert professionals, and compassionate care to ensure patient satisfaction.
+    </p>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Our Services</h2>
+    </div>
+    <div class="services">
+        <div class="card"><h3>Emergency Care</h3><p>24/7 emergency services with rapid response.</p></div>
+        <div class="card"><h3>Laboratory</h3><p>Advanced diagnostic and testing facilities.</p></div>
+        <div class="card"><h3>Pharmacy</h3><p>In-house pharmacy with quality medicines.</p></div>
+        <div class="card"><h3>ICU</h3><p>Modern intensive care units with expert monitoring.</p></div>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Our Doctors</h2>
+    </div>
+    <div class="doctors">
+        <div class="card"><h3>Dr. Kumar</h3><p>Cardiologist</p></div>
+        <div class="card"><h3>Dr. Priya</h3><p>Gynecologist</p></div>
+        <div class="card"><h3>Dr. Arjun</h3><p>Orthopedic Surgeon</p></div>
+    </div>
+</section>
+
+<section class="appointment">
+    <div class="section-title">
+        <h2>Book Appointment</h2>
+    </div>
+
+    <form>
+        <input type="text" placeholder="Patient Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <select>
+            <option>Select Department</option>
+            <option>Cardiology</option>
+            <option>Orthopedics</option>
+            <option>Neurology</option>
+            <option>Gynecology</option>
+        </select>
+
+        <textarea rows="4" placeholder="Describe your problem"></textarea>
+        <button type="submit">Submit Appointment</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 MedCare Hospital Management System | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

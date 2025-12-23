@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Patient Login | MedCare Hospital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+body {
+            height: 100vh;
+
+            /* Background Image + Overlay */
+            background:
+                linear-gradient(rgba(10, 61, 98, 0.75), rgba(10, 61, 98, 0.75)),
+                url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+   
+.login-container{
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(8px);
+    width:380px;
+    padding:35px;
+    border-radius:14px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
+    text-align:center;
+    animation:fadeIn .8s ease-in-out;
+}
+.login-container h2{
+    color:#0a3d62;
+    margin-bottom:8px;
+}
+.login-container p{
+    margin-bottom:25px;
+    font-size:14px;
+    color:#555;
+}
+.login-container input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+.login-container input:focus{
+    outline:none;
+    border-color:#0a3d62;
+}
+.login-container button{
+    width:100%;
+    padding:12px;
+    background:#0a3d62;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+.login-container button:hover{
+    background:#075078;
+}
+.link{
+    margin-top:15px;
+    font-size:14px;
+}
+.link a{
+    color:#0a3d62;
+    text-decoration:none;
+}
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+    <h2>Patient Login</h2>
+    <p>Hospital Management System</p>
+
+    <form>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <div class="link">
+        New Patient? <a href="pregister.html">Register Here</a>
+    </div>
+</div>
+
+</body>
+</html>
